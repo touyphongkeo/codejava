@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.APResturant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.app.APResturant.utils.MultiLanguageApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.app.APResturant.orders.DeviceListActivity"></activity>
+        <activity android:name="com.app.APResturant.settings.payment_method.EditPaymentMethodActivity" />
+        <activity android:name="com.app.APResturant.settings.payment_method.AddPaymentMethodActivity" />
+        <activity android:name="com.app.APResturant.settings.payment_method.PaymentMethodActivity" />
+        <activity android:name="com.app.APResturant.settings.categories.EditCategoryActivity" />
+        <activity android:name="com.app.APResturant.settings.categories.AddCategoryActivity" />
+        <activity android:name="com.app.APResturant.settings.categories.CategoriesActivity" />
+        <activity android:name="com.app.APResturant.expense.EditExpenseActivity" />
+        <activity android:name="com.app.APResturant.suppliers.EditSuppliersActivity" />
+        <activity android:name="com.app.APResturant.customers.EditCustomersActivity" />
+        <activity android:name="com.app.APResturant.product.EditProductScannerViewActivity" />
+        <activity android:name="com.app.APResturant.pdf_report.ViewPDFActivity" />
+        <activity android:name="com.app.APResturant.pos.ScannerActivity" />
+        <activity android:name="com.app.APResturant.product.ScannerViewActivity" />
+        <activity android:name="com.app.APResturant.product.EditProductActivity" />
+        <activity android:name="com.app.APResturant.settings.backup.BackupActivity" />
+        <activity android:name="com.app.APResturant.settings.shop.ShopInformationActivity" />
+        <activity android:name="com.app.APResturant.report.ExpenseGraphActivity" />
+        <activity android:name="com.app.APResturant.report.ExpenseReportActivity" />
+        <activity android:name="com.app.APResturant.expense.AddExpenseActivity" />
+        <activity android:name="com.app.APResturant.settings.SettingsActivity" />
+        <activity android:name="com.app.APResturant.expense.ExpenseActivity" />
+        <activity android:name="com.app.APResturant.report.GraphReportActivity" />
+        <activity android:name="com.app.APResturant.report.SalesReportActivity" />
+        <activity android:name="com.app.APResturant.report.ReportActivity" />
+        <activity android:name="com.app.APResturant.orders.OrderDetailsActivity" />
+        <activity android:name="com.app.APResturant.orders.OrdersActivity" />
+        <activity android:name="com.app.APResturant.pos.ProductCart" />
+        <activity android:name="com.app.APResturant.pos.PosActivity" />
+        <activity android:name="com.app.APResturant.product.AddProductActivity" />
+        <activity android:name="com.app.APResturant.product.ProductActivity" />
+        <activity android:name="com.app.APResturant.suppliers.AddSuppliersActivity" />
+        <activity android:name="com.app.APResturant.suppliers.SuppliersActivity" />
+        <activity android:name="com.app.APResturant.customers.AddCustomersActivity" />
+        <activity android:name="com.app.APResturant.customers.CustomersActivity" />
+        <activity android:name="com.app.APResturant.HomeActivity" />
+        <activity android:name="com.app.APResturant.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" />
+        </provider> <!-- For Admob -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_application_id" />
+    </application>
+
+</manifest>
